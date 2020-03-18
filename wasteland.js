@@ -1,5 +1,5 @@
-let Twit = require(‘twit’);
-let TwitterBot = require(‘node - twitterbot’).TwitterBot;
+let Twit = require('twit');
+let TwitterBot = require('node-twitterbot').TwitterBot;
 let WastelandBot = new TwitterBot({
   consumer_key: process.env.WASTELAND_CONSUMER_KEY,
   consumer_secret: process.env.WASTELAND_CONSUMER_SECRET,
