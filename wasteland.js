@@ -7,5 +7,9 @@ let WastelandBot = new TwitterBot({
   access_token_secret: process.env.WASTELAND_ACCESS_TOKEN_SECRET
 });
 
-const phrase = "heroku tweet!"
-WastelandBot.tweet(phrase);
+const linebreakTest =
+  `FOR EZRA POUND
+IL MIGLIOR FABBRO
+I. The Burial of the Dead
+`
+WastelandBot.tweet(linebreakTest);
