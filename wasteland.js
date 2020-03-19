@@ -498,7 +498,7 @@ I. The Burial of the Dead
 `
 
 let firstLine = Math.floor(Math.random() * poem.length - 3);
-// Condition check should be unecessary if the firstLine can't be greater than 478 i.e. 'poem.length - 2'
+// Condition check should be unecessary if the firstLine can't be greater than 478 i.e. 'poem.length - 3'
 let secondLine = firstLine > 478 ? firstLine - 1 : firstLine + 1;
 let thirdLine = secondLine > 477 ? secondLine - 1 : secondLine + 1;
 
