@@ -458,10 +458,10 @@ IL MIGLIOR FABBRO
 I. The Burial of the Dead
 `
 
-twolines = `${poem[poemline]}
-${poem[secondPoemLine]}`
-
 let poemline = Math.floor(Math.random() * poem.length)
 let secondPoemLine = poemline + 1 <= 441 ? poemline + 1 : poemline - 1;
+
+twolines = `${poem[poemline]}
+${poem[secondPoemLine]}`
 
 WastelandBot.tweet(twolines);
