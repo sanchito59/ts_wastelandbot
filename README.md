@@ -1,6 +1,8 @@
 # [TS Waste Land Bot](https://www.twitter.com/TSwasteland_bot)
 
-## By **Chris Sanchez**
+### By **Chris Sanchez**
+
+TS Waste Land Bot is a Twitter bot built with Node.js and the Twitter API that tweets 4 lines of The Waste Land by T. S. Eliot every hour, ad infinitum.
 
 ``` 
 April is the cruelest month, breeding  
@@ -17,4 +19,6 @@ Technologies
 * Node.js
 * JavaScript 
 * Twitter API
+* [twit](https://www.npmjs.com/package/twit)
+* [node-twitterbot](https://www.npmjs.com/package/node-twitterbot)
 

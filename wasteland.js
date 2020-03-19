@@ -491,20 +491,25 @@ let poem = [
   "              	Shantih 	shantih 	shantih",
 ]
 
-const linebreakTest =
-  `FOR EZRA POUND
-IL MIGLIOR FABBRO
-I. The Burial of the Dead
-`
+let firstLine = Math.floor(Math.random() * (poem.length - 4)); // Maximum random line is 477, array length is 481
+let secondLine = firstLine + 1;
+let thirdLine = secondLine + 1;
+let fourthLine = thirdLine + 1;
 
-let firstLine = Math.floor(Math.random() * poem.length - 3);
-// Condition check should be unecessary if the firstLine can't be greater than 478 i.e. 'poem.length - 3'
-let secondLine = firstLine > 478 ? firstLine - 1 : firstLine + 1;
-let thirdLine = secondLine > 477 ? secondLine - 1 : secondLine + 1;
+if (firstLine < 1) { // firstLine was 0 and tweeted undefined lines- small error catch
+  secondLine = 1;
+  thirdLine = 2;
+  fourthLine = 3;
+} else if (firstLine >= 478) { // error catch undefined poem array positions
+  firstLine = 477;
+  secondLine = 478;
+  thirdLine = 479;
+  fourthLine = 480;
+}
 
-let threeLines =
+let fourLines =
   `${poem[firstLine]}
-${poem[secondLine]}
-${poem[thirdLine]}`
-
-WastelandBot.tweet(threeLines);
+  ${poem[secondLine]}
+  ${poem[thirdLine]}
+  ${poem[fourthLine]}`
+WastelandBot.tweet(fourLines);
