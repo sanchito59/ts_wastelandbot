@@ -458,7 +458,8 @@ IL MIGLIOR FABBRO
 I. The Burial of the Dead
 `
 
-let firstLine = Math.floor(Math.random() * poem.length);
+let firstLine = Math.floor(Math.random() * poem.length - 2);
+// Condition check should be unecessary if the firstLine can't be greater than 439 i.e. 'poem.length - 2'
 let secondLine = firstLine > 441 ? firstLine - 1 : firstLine + 1;
 let thirdLine = secondLine > 440 ? secondLine - 1 : secondLine + 1;
 
