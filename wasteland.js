@@ -1,13 +1,12 @@
-let Twit = require('twit');
-let TwitterBot = require('node-twitterbot').TwitterBot;
-let WastelandBot = new TwitterBot({
+const TwitterBot = require('node-twitterbot').TwitterBot;
+const WastelandBot = new TwitterBot({
   consumer_key: process.env.WASTELAND_CONSUMER_KEY,
   consumer_secret: process.env.WASTELAND_CONSUMER_SECRET,
   access_token: process.env.WASTELAND_ACCESS_TOKEN,
   access_token_secret: process.env.WASTELAND_ACCESS_TOKEN_SECRET
 });
 
-let poem = [
+const poem = [
   "FOR EZRA POUND",
   "      IL MIGLIOR FABBRO",
   " ",
@@ -489,7 +488,7 @@ let poem = [
   "Why then Ile fit you. Hieronymo's mad againe.",
   "Datta. Dayadhvam. Damyata.",
   "              	Shantih 	shantih 	shantih",
-]
+];
 
 let firstLine = Math.floor(Math.random() * (poem.length - 4)); // Maximum random line is 477, array length is 481
 let secondLine = firstLine + 1;
@@ -507,9 +506,10 @@ if (firstLine < 1) { // firstLine was 0 and tweeted undefined lines- small error
   fourthLine = 480;
 }
 
-let fourLines =
+const fourLines =
   `${poem[firstLine]}
   ${poem[secondLine]}
   ${poem[thirdLine]}
   ${poem[fourthLine]}`
+
 WastelandBot.tweet(fourLines);

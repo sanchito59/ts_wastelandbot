@@ -19,6 +19,9 @@ Technologies
 * Node.js
 * JavaScript 
 * Twitter API
-* [twit](https://www.npmjs.com/package/twit)
 * [node-twitterbot](https://www.npmjs.com/package/node-twitterbot)
+
+- - -
+
+Chris Sanchez - c.sanch7@gmail.com
 

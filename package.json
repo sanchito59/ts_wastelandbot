@@ -9,7 +9,6 @@
   "author": "Chris Sanchez",
   "license": "ISC",
   "dependencies": {
-    "node-twitterbot": "^0.2.2",
-    "twit": "^2.2.11"
+    "node-twitterbot": "^0.2.2"
   }
 }
